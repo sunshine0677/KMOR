@@ -14,12 +14,5 @@ The datasets are provided in their original format. Each road network dataset ty
 - A **`*node`** file containing node IDs and coordinates.
 - A **`*edge`** file containing edge information with start and end nodes.
 
-Please cite the original sources (as listed in the table above) and our paper if you use this data.
-
-## 📜 Reference
-
-If you use these datasets in your work, please cite our paper:
-
-> **"KMOR: Finding Top-k Multi-constraint Optimal Routes over On-demand Transportation Networks"**
 
 
