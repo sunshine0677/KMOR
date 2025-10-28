@@ -3,10 +3,10 @@ This repository contains the datasets used in our paper **"KMOR: Finding Top-k M
 ## 📁 Datasets
 | Dataset | Description | Original Source | Files in This Repository |
 | :--- | :--- | :--- | :--- |
-| **CD**<br>(Chengdu) | Road network of Chengdu City | [GAIA Initiative](https://outreach.didichuxing.com/research/opendata/)<br>*[Link inactive, last accessed: 2021-10-09]* |Last accessed 9 Oct2021|
-| **TG**<br>(San Joaquin) | Road network of San Joaquin County | Brinkhoff, T. "A framework for generating network-based moving objects" | `TG.cedge.txt`<br>`TG.cnode.txt` |
-| **OL**<br>(Oldenburg) | Road network of Oldenburg City | Brinkhoff, T. "A framework for generating network-based moving objects" | `OL.cedge.txt`<br>`OL.cnode.txt` |
-| **NY**<br>(New York) | Road network of New York City | [Spatial Dataset Repository](http://www.cs.utah.edu/~lifeifei/SpatialDataset.html)<br>*[Link inactive, last accessed: 2021-10-09]* |Last accessed 9 Oct2021|
+| **CD**<br>(Chengdu) | Road network of Chengdu City | [GAIA Initiative](https://outreach.didichuxing.com/research/opendata/)<br>*[Link inactive, last accessed: 2021-10-09]* ||
+| **TG**<br>(San Joaquin) | Road network of San Joaquin County | [Spatial Dataset Repository](https://users.cs.utah.edu/~lifeifei/SpatialDataset.htm)<br> | `TG.cedge.txt`<br>`TG.cnode.txt` |
+| **OL**<br>(Oldenburg) | Road network of Oldenburg City | [Spatial Dataset Repository](https://users.cs.utah.edu/~lifeifei/SpatialDataset.htm)<br> | `OL.cedge.txt`<br>`OL.cnode.txt` |
+| **NY**<br>(New York) | Road network of New York City | [Spatial Dataset Repository](http://www.cs.utah.edu/~lifeifei/SpatialDataset.html)<br>*[Link inactive, last accessed: 2021-10-09]* ||
 
 ## 🔧 Usage
 
