@@ -20,7 +20,7 @@ The datasets are provided in their original format. Each road network dataset ty
 - **Key Features**:
   - Efficient pruning of suboptimal routes
   - Multi-constraint optimization
-  - Scalable network exploration
+  - Returns top-k diverse optimal routes
 
 ### DP-KMOR (`dpkmor`) 
 - **Purpose**: Dynamic programming approach for Top-k Multi-constraint Optimal Routes
