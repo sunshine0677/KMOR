@@ -3,10 +3,10 @@ This repository contains the datasets used in our paper **"KMOR: Finding Top-k M
 ## 📁 Datasets
 | Dataset | Description | Original Source | Files in This Repository |
 | :--- | :--- | :--- | :--- |
-| **CD**<br>(Chengdu) | Road network of Chengdu City | [GAIA Initiative](https://outreach.didichuxing.com/research/opendata/)<br>*[Link inactive, last accessed: 2021-10-09]* ||
+| **CD**<br>(Chengdu) | Road network of Chengdu City | OpenStreetMap via osmnx |`CD.cedge.txt`|
 | **TG**<br>(San Joaquin) | Road network of San Joaquin County | [Spatial Dataset Repository](https://users.cs.utah.edu/~lifeifei/SpatialDataset.htm)<br> | `TG.cedge.txt` |
 | **OL**<br>(Oldenburg) | Road network of Oldenburg City | [Spatial Dataset Repository](https://users.cs.utah.edu/~lifeifei/SpatialDataset.htm)<br> | `OL.cedge.txt` |
-| **NY**<br>(New York) | Road network of New York City | [Spatial Dataset Repository](http://www.cs.utah.edu/~lifeifei/SpatialDataset.html)<br>*[Link inactive, last accessed: 2021-10-09]* ||
+| **NY**<br>(New York) | Road network of New York City | OpenStreetMap via osmnx |`NY.cedge.txt`|
 
 ## 🔧 Usage
 
