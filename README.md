@@ -6,7 +6,7 @@ This repository contains the datasets used in our paper **"KMOR: Finding Top-k M
 | **CD**<br>(Chengdu) | Road network of Chengdu City | OpenStreetMap via osmnx |`CD.cedge.txt`|
 | **TG**<br>(San Joaquin) | Road network of San Joaquin County | [Spatial Dataset Repository](https://users.cs.utah.edu/~lifeifei/SpatialDataset.htm)<br> | `TG.cedge.txt` |
 | **OL**<br>(Oldenburg) | Road network of Oldenburg City | [Spatial Dataset Repository](https://users.cs.utah.edu/~lifeifei/SpatialDataset.htm)<br> | `OL.cedge.txt` |
-| **NY**<br>(New York) | Road network of New York City | OpenStreetMap via osmnx |`NY.cedge.txt`|
+| **NY**<br>(New York) | Road network of New York City | OpenStreetMap via osmnx |`NY.cedge.zip`|
 
 ## 🔧 Usage
 
