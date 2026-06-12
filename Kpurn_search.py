@@ -183,81 +183,6 @@ def path_cost(graph: Graph, path: List[str]) -> float:
     return total
 
 
-def path_subcost(graph: Graph, path: List[str], i: int, j: int) -> float:
-    """计算路径中下标区间 [i, j] 的成本。若无效则返回 inf。"""
-    if i < 0 or j >= len(path) or i >= j:
-        return 0.0 if i == j else math.inf
-    return path_cost(graph, path[i:j + 1])
-
-
-def per_request_ok(path: List[str], request: Request, graph: Graph) -> bool:
-    """判断路径能否在个人绕行限制内服务该请求。"""
-    pairs = _served_pairs(path, [request])
-    if request.name not in pairs:
-        return False
-    pi, di = pairs[request.name]
-    pd_cost_on_new = path_subcost(graph, path, pi, di)
-    _, pd_shortest = dijkstra_shortest_path(graph, request.pickup, request.dropoff)
-    if math.isinf(pd_shortest) or math.isinf(pd_cost_on_new):
-        return False
-    pd_detour = pd_cost_on_new - pd_shortest
-    return pd_detour <= request.wait_limit
-
-
-def select_feasible_subset(path: List[str], requests: List[Request], capacity: int, graph: Graph) -> Set[str]:
-    """在给定路径上，选择一个容量可行的服务请求子集，尽量数量多（启发式）。
-    策略：按索引扫描，drop先于pick；当超载时，移除当前在车中“需求最大、且最晚下车”的请求。
-    返回被保留服务的请求名集合。
-    """
-    served_pairs = _served_pairs(path, requests)
-    # 仅保留个人绕行合规的候选
-    candidate = {r.name: r for r in requests if r.name in served_pairs and per_request_ok(path, r, graph)}
-    if not candidate:
-        return set()
-
-    # 事件表
-    drop_at: Dict[int, List[str]] = {}
-    pick_at: Dict[int, List[str]] = {}
-    for rname, (pi, di) in served_pairs.items():
-        if rname not in candidate:
-            continue
-        drop_at.setdefault(di, []).append(rname)
-        pick_at.setdefault(pi, []).append(rname)
-
-    # 活动集合：存储 (rname, demand, drop_idx)
-    active: List[Tuple[str, int, int]] = []
-    total = 0
-    kept: Set[str] = set()
-
-    for i in range(len(path)):
-        # 先下车
-        for rname in drop_at.get(i, []) or []:
-            # 下车仅对仍在 active 的起作用
-            for idx in range(len(active)):
-                if active[idx][0] == rname:
-                    _, d, _ = active.pop(idx)
-                    total = max(0, total - d)
-                    break
-        # 再上车
-        for rname in pick_at.get(i, []) or []:
-            r = candidate[rname]
-            _, di = served_pairs[rname]
-            active.append((rname, r.demand, di))
-            kept.add(rname)
-            total += r.demand
-            # 如超载，移除最差项直到可行
-            if total > capacity:
-                while total > capacity and active:
-                    # 选需求最大，若并列则选 drop 最晚
-                    worst_idx = max(range(len(active)), key=lambda k: (active[k][1], active[k][2]))
-                    wname, wd, _ = active.pop(worst_idx)
-                    if wname in kept:
-                        kept.remove(wname)
-                    total -= wd
-
-    return kept
-
-
 def is_reasonable_path(path: List[str]) -> bool:
     """检查路径是否合理"""
     if len(path) > 30:  # 路径太长
@@ -308,14 +233,10 @@ def balanced_insert(graph: Graph, base_path: List[str], request: Request, capaci
     if request.pickup not in graph.adj or request.dropoff not in graph.adj:
         return None
 
-    # 选择插入锚点：路径较短尝试全位置，否则抽样
-    if n <= 50:
-        positions = list(range(n))
-    else:
-        step = max(1, n // 8)
-        positions = list(range(0, n, step))
-        if (n - 1) not in positions:
-            positions.append(n - 1)
+    # 限制搜索位置
+    positions = list(range(0, n, max(1, n // 5)))
+    if n - 1 not in positions:
+        positions.append(n - 1)
 
     for i in positions:
         for j in positions:
@@ -354,21 +275,25 @@ def balanced_insert(graph: Graph, base_path: List[str], request: Request, capaci
             if new_cost == math.inf:
                 continue
 
-            # 乘客个体绕行约束：新路径中该乘客的上车到下车的成本相对最短路的增量不得超过 wait_limit
-            pairs = _served_pairs(new_path, [request])
-            if request.name not in pairs:
-                continue
-            pi, di = pairs[request.name]
-            pd_cost_on_new = path_subcost(graph, new_path, pi, di)
-            _, pd_shortest = dijkstra_shortest_path(graph, request.pickup, request.dropoff)
-            if math.isinf(pd_shortest) or math.isinf(pd_cost_on_new):
-                continue
-            pd_detour = pd_cost_on_new - pd_shortest
-            if pd_detour > request.wait_limit:
+            detour = new_cost - base_cost
+            if detour > request.wait_limit:
                 continue
 
-            # 容量检查（仅对当前请求即可；二次阶段会对全体请求检查）
-            if capacity_feasible(new_path, [request], capacity) and (best is None or new_cost < best[1]):
+            # 容量检查
+            load = 0
+            feasible = True
+            delivered = False
+            for node in new_path:
+                if node == request.pickup:
+                    load += request.demand
+                if node == request.dropoff and not delivered:
+                    delivered = True
+                    load = max(0, load - request.demand)
+                if load > capacity:
+                    feasible = False
+                    break
+
+            if feasible and (best is None or new_cost < best[1]):
                 best = (new_path, new_cost)
 
     return best
@@ -376,8 +301,7 @@ def balanced_insert(graph: Graph, base_path: List[str], request: Request, capaci
 
 # -------------------- 平衡的KPURN算法 --------------------
 def kpurn_search_balanced(graph: Graph, source: str, target: str,
-                          requests: List[Request], capacity: int, k: int = 3,
-                          beam: int = 5, max_iters: int = 3) -> List[Tuple[List[str], float, int]]:
+                          requests: List[Request], capacity: int, k: int = 3) -> List[Tuple[List[str], float, int]]:
     """
     平衡的KPURN算法 - 在路径质量和多样性之间平衡
     """
@@ -389,65 +313,46 @@ def kpurn_search_balanced(graph: Graph, source: str, target: str,
         return []
 
     results = []
-    base_keep = select_feasible_subset(base_path, requests, capacity, graph)
-    results.append((base_path, base_cost, len(base_keep)))
-    print(f"基础路径: 服务{len(base_keep)}请求, 代价{base_cost:.2f}, 长度{len(base_path)}")
+    base_served = count_served_requests(base_path, requests)
+    results.append((base_path, base_cost, base_served))
+    print(f"基础路径: 服务{base_served}请求, 代价{base_cost:.2f}, 长度{len(base_path)}")
 
     # 步骤2: 对每个请求尝试插入
-    unserved = [req for req in requests if req.name not in select_feasible_subset(base_path, requests, capacity, graph)]
+    unserved = [req for req in requests if not is_request_served(base_path, req)]
     print(f"未服务请求: {[req.name for req in unserved]}")
 
     for request in unserved:
         inserted = balanced_insert(graph, base_path, request, capacity)
         if inserted:
             new_path, new_cost = inserted
-            keep = select_feasible_subset(new_path, requests, capacity, graph)
-            results.append((new_path, new_cost, len(keep)))
-            print(f"插入 {request.name}: 服务{len(keep)}请求, 代价{new_cost:.2f}, 长度{len(new_path)}")
+            new_served = count_served_requests(new_path, requests)
+            results.append((new_path, new_cost, new_served))
+            print(f"插入 {request.name}: 服务{new_served}请求, 代价{new_cost:.2f}, 长度{len(new_path)}")
 
-    # 步骤3: 束搜索（多轮组合插入），尽量服务更多乘客
-    improved_results: List[Tuple[List[str], float, int]] = list(results)
-    frontier: List[Tuple[List[str], float, int]] = list(results)
-    seen_paths: Set[Tuple[str, ...]] = {tuple(p) for p, _, _ in results}
-
-    for it in range(max_iters):
-        next_candidates: List[Tuple[List[str], float, int]] = []
-        for path, cost, served in frontier:
-            if served == len(requests):
-                continue
+    # 步骤3: 对已插入的路径继续插入剩余请求
+    improved_results = list(results)
+    for path, cost, served in results:
+        if served < len(requests):  # 还有未服务的请求
             remaining_requests = [req for req in requests if not is_request_served(path, req)]
             for req in remaining_requests:
                 inserted = balanced_insert(graph, path, req, capacity)
-                if not inserted:
-                    continue
-                new_path, new_cost = inserted
-                keep = select_feasible_subset(new_path, requests, capacity, graph)
-                key = tuple(new_path)
-                if key in seen_paths:
-                    continue
-                seen_paths.add(key)
-                next_candidates.append((new_path, new_cost, len(keep)))
-                print(f"组合插入 {req.name}: 服务{len(keep)}请求, 代价{new_cost:.2f}, 长度{len(new_path)}")
+                if inserted:
+                    new_path, new_cost = inserted
+                    new_served = count_served_requests(new_path, requests)
+                    if new_served > served:  # 只有真正改进才加入
+                        improved_results.append((new_path, new_cost, new_served))
+                        print(f"二次插入 {req.name}: 服务{new_served}请求, 代价{new_cost:.2f}, 长度{len(new_path)}")
 
-        if not next_candidates:
-            break
-        # 排序并裁剪束宽度
-        next_candidates.sort(key=lambda x: (-x[2], x[1]))
-        next_candidates = next_candidates[:max(beam, k)]
-        improved_results.extend(next_candidates)
-        frontier = next_candidates
-
-    # 步骤4: 过滤、排序和去重（使用新的去重集合，避免与上一步的探索去重混淆）
-    valid_results: List[Tuple[List[str], float, int]] = []
-    final_seen: Set[Tuple[str, ...]] = set()
+    # 步骤4: 过滤、排序和去重
+    valid_results = []
+    seen_paths = set()
 
     for path, cost, served in improved_results:
-        # 使用可服务子集而非强制全服务；保持路径合理性
         if is_reasonable_path(path):
-            key = tuple(path)
-            if key not in final_seen:
+            path_key = tuple(path)
+            if path_key not in seen_paths:
                 valid_results.append((path, cost, served))
-                final_seen.add(key)
+                seen_paths.add(path_key)
 
     # 按服务请求数降序，代价升序排序
     valid_results.sort(key=lambda x: (-x[2], x[1]))
@@ -465,58 +370,17 @@ def count_served_requests(path: List[str], requests: List[Request]) -> int:
 
 
 def is_request_served(path: List[str], request: Request) -> bool:
-    """检查请求是否被路径服务：第一次到达pickup，之后第一次到达dropoff"""
-    pickup_idx: Optional[int] = None
+    """检查请求是否被路径服务（pickup在dropoff之前）"""
+    pickup_idx = -1
+    dropoff_idx = -1
+
     for i, node in enumerate(path):
-        if pickup_idx is None:
-            if node == request.pickup:
-                pickup_idx = i
-        else:
-            if node == request.dropoff:
-                return True
-    return False
+        if node == request.pickup and pickup_idx == -1:
+            pickup_idx = i
+        if node == request.dropoff:
+            dropoff_idx = i
 
-
-def _served_pairs(path: List[str], requests: List[Request]) -> Dict[str, Tuple[int, int]]:
-    """返回所有被路径服务的请求的(上车索引, 下车索引)。"""
-    pos_by_node: Dict[str, List[int]] = {}
-    for idx, node in enumerate(path):
-        pos_by_node.setdefault(node, []).append(idx)
-
-    served: Dict[str, Tuple[int, int]] = {}
-    for req in requests:
-        p_list = pos_by_node.get(req.pickup)
-        d_list = pos_by_node.get(req.dropoff)
-        if not p_list or not d_list:
-            continue
-        for pi in p_list:
-            di = next((dj for dj in d_list if dj > pi), None)
-            if di is not None:
-                served[req.name] = (pi, di)
-                break
-    return served
-
-
-def capacity_feasible(path: List[str], requests: List[Request], capacity: int) -> bool:
-    """全局容量检查：同一索引先下车再上车。"""
-    served = _served_pairs(path, requests)
-    drop_at: Dict[int, List[Request]] = {}
-    pick_at: Dict[int, List[Request]] = {}
-    rmap: Dict[str, Request] = {r.name: r for r in requests}
-    for rname, (pi, di) in served.items():
-        r = rmap[rname]
-        drop_at.setdefault(di, []).append(r)
-        pick_at.setdefault(pi, []).append(r)
-
-    load = 0
-    for i in range(len(path)):
-        for r in drop_at.get(i, []):
-            load = max(0, load - r.demand)
-        for r in pick_at.get(i, []):
-            load += r.demand
-            if load > capacity:
-                return False
-    return True
+    return pickup_idx != -1 and dropoff_idx != -1 and pickup_idx < dropoff_idx
 
 
 # -------------------- CLI 接口 --------------------
@@ -585,15 +449,15 @@ def main(argv: Optional[List[str]] = None) -> int:
     print("=" * 60)
 
     for i, (path, cost, served) in enumerate(results, 1):
-        # 基于容量与个人绕行限制，选取真正可服务的子集，用于展示
-        keep_names = select_feasible_subset(path, requests, capacity, graph)
-        keep_list = [req for req in requests if req.name in keep_names]
-
-        print(f"Top{i}: 服务{len(keep_list)}请求, 代价{cost:.2f}, 路径长度{len(path)}")
+        print(f"Top{i}: 服务{served}请求, 代价{cost:.2f}, 路径长度{len(path)}")
         print(f"      路径: {' -> '.join(path)}")
 
-        if keep_list:
-            served_reqs = [f"{req.name}({req.pickup}→{req.dropoff})" for req in keep_list]
+        # 显示服务的具体请求
+        if served > 0:
+            served_reqs = []
+            for req in requests:
+                if is_request_served(path, req):
+                    served_reqs.append(f"{req.name}({req.pickup}→{req.dropoff})")
             print(f"      服务请求: {', '.join(served_reqs)}")
         print()
 
