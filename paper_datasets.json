@@ -1,0 +1,52 @@
+{
+  "datasets": [
+    {
+      "name": "OL",
+      "edge_file": "OL.cedge.txt",
+      "requests_file": "requests_ol.txt",
+      "source": "6072",
+      "target": "4224",
+      "time_budget": 15580.6,
+      "ignore_first_col": true,
+      "directed": false,
+      "num_requests": 12,
+      "shortest_path_cost": 10972.2
+    },
+    {
+      "name": "TG",
+      "edge_file": "TG.cedge.txt",
+      "requests_file": "requests_tg.txt",
+      "source": "10223",
+      "target": "7829",
+      "time_budget": 13688.1,
+      "ignore_first_col": true,
+      "directed": false,
+      "num_requests": 12,
+      "shortest_path_cost": 9639.5
+    },
+    {
+      "name": "CD",
+      "edge_file": "CD.edges.txt",
+      "requests_file": "requests_cd.txt",
+      "source": "0",
+      "target": "159437",
+      "time_budget": 205452.5,
+      "ignore_first_col": true,
+      "directed": false,
+      "num_requests": 15,
+      "shortest_path_cost": 132550.0
+    },
+    {
+      "name": "NY",
+      "edge_file": "NY.edges.txt",
+      "requests_file": "requests_ny.txt",
+      "source": "327958",
+      "target": "154224",
+      "time_budget": 79205.0,
+      "ignore_first_col": true,
+      "directed": false,
+      "num_requests": 15,
+      "shortest_path_cost": 51100.0
+    }
+  ]
+}
