@@ -201,22 +201,24 @@ The submitted Fig. 7 uses **OL, TG, CD, and NY** and varies:
 
 The figure generator is `plot_dynamic_sensitivity_2x2.py`. Recreating the submitted plots requires the full paired event CSVs and metadata, which are **not included**. Additional unfinished sensitivity workloads on BAY/COL/FLA/NW are separate from the submitted Fig. 7 and should not be substituted for it.
 
-### 6.7 Submitted paper tables and figures
 
-The numbering and captions below are checked against the **submitted manuscript**. All listed items remain **PARTIAL** for end-to-end reproduction until their original fixed inputs and required raw outputs are available.
+### 6.7 Submitted Paper Tables and Figures
 
-| Paper item | Experiment | Main entry point / material | Status |
-|---|---|---|---|
-| Table II | Statistics of Eight Road Networks | `paper_datasets_8.json` | PARTIAL |
-| Table III | Exactness of Static Top-k Computation | `static_correctness_experiment.py` | PARTIAL |
-| Table IV | Efficiency of Static Top-k Computation | `static_threeway_efficiency.py` | PARTIAL |
-| Table V | Performance Comparison of Dynamic Algorithms | `dynamic_paired_experiment.py` | PARTIAL |
-| Table VI | Event-Specific Processing Statistics | Archived dynamic event records | PARTIAL |
-| Fig. 5 | Overall speedup of EI-DPKMOR over Full-DPKMOR | `plot_dynamic_overall_speedup_eight.py` | PARTIAL |
-| Fig. 6 | Event-specific speedup of EI-DPKMOR over Full-DPKMOR | `plot_dynamic_event_type_grouped_eight.py` | PARTIAL |
-| Fig. 7 | Sensitivity of EI-DPKMOR performance | `plot_dynamic_sensitivity_2x2.py` | PARTIAL |
+The following table provides a mapping between the experimental results reported in the submitted manuscript and their corresponding implementations and supporting materials.
 
-**PARTIAL** means that the paper item is identified and some supporting materials are available; it does **not** mean that exact-input replay has been verified. Historical summaries must not be relabeled as newly reproduced outputs.
+| Paper Item | Experiment | Implementation / Materials |
+|---|---|---|
+| Table II | Statistics of Eight Road Networks | `paper_datasets_8.json` |
+| Table III | Exactness of Static Top-k Computation | `static_correctness_experiment.py` |
+| Table IV | Efficiency of Static Top-k Computation | `static_threeway_efficiency.py` |
+| Table V | Performance Comparison of Dynamic Algorithms | `dynamic_paired_experiment.py` |
+| Table VI | Event-Specific Processing Statistics | Archived dynamic event records |
+| Fig. 5 | Overall Speedup of EI-DPKMOR over Full-DPKMOR | `plot_dynamic_overall_speedup_eight.py` |
+| Fig. 6 | Event-Specific Speedup of EI-DPKMOR over Full-DPKMOR | `plot_dynamic_event_type_grouped_eight.py` |
+| Fig. 7 | Sensitivity of EI-DPKMOR Performance | `plot_dynamic_sensitivity_2x2.py` |
+
+The repository provides algorithm implementations, experimental configurations, and selected archived results. Reproducing the original experiments requires the corresponding fixed workloads and datasets, some of which are not included in the current release. Archived results are preserved separately from newly generated experimental outputs.
+
 
 ## 7. Repository Layout
 
