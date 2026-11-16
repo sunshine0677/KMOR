@@ -1,0 +1,1871 @@
+{
+  "dataset_config": "paper_datasets_8.json",
+  "scenario_config": "dynamic_scenarios.json",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "scenarios": [
+    {
+      "name": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "value": 1.0,
+      "initial_requests": 3,
+      "arrival_count": 12,
+      "edge_updates": 8,
+      "horizon_ratio": 0.8,
+      "corridor_edge_ratio": 0.5,
+      "cancel_probability": 0.15,
+      "traffic_factors": [
+        1.5
+      ],
+      "corridor_count": 3,
+      "corridor_max_cost_ratio": 1.5,
+      "wait_approach_factor": 1.1,
+      "wait_slack_ratio": 0.005,
+      "demand_two_probability": 0.35
+    }
+  ],
+  "workloads": [
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "BAY",
+      "seed": 1,
+      "edge_file": "datasets/dimacs9/BAY.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_bay_seed1.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_bay_seed1.csv",
+      "source": "189940",
+      "target": "106354",
+      "time_budget": 4489647.9,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 2896547.0,
+      "path_nodes": 1245,
+      "corridor_count": 3,
+      "corridor_costs": [
+        2896547.0,
+        2897011.0,
+        2897699.0
+      ],
+      "horizon": 2317237.6,
+      "event_counts": {
+        "EdgeUpdate": 16,
+        "RequestArrival": 12,
+        "RequestCancel": 2
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "BAY",
+      "seed": 2,
+      "edge_file": "datasets/dimacs9/BAY.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_bay_seed2.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_bay_seed2.csv",
+      "source": "189940",
+      "target": "106354",
+      "time_budget": 4489647.9,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 2896547.0,
+      "path_nodes": 1245,
+      "corridor_count": 3,
+      "corridor_costs": [
+        2896547.0,
+        2897011.0,
+        2897699.0
+      ],
+      "horizon": 2317237.6,
+      "event_counts": {
+        "EdgeUpdate": 16,
+        "RequestArrival": 12,
+        "RequestCancel": 5
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "BAY",
+      "seed": 3,
+      "edge_file": "datasets/dimacs9/BAY.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_bay_seed3.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_bay_seed3.csv",
+      "source": "189940",
+      "target": "106354",
+      "time_budget": 4489647.9,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 2896547.0,
+      "path_nodes": 1245,
+      "corridor_count": 3,
+      "corridor_costs": [
+        2896547.0,
+        2897011.0,
+        2897699.0
+      ],
+      "horizon": 2317237.6,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 1
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "BAY",
+      "seed": 4,
+      "edge_file": "datasets/dimacs9/BAY.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_bay_seed4.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_bay_seed4.csv",
+      "source": "189940",
+      "target": "106354",
+      "time_budget": 4489647.9,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 2896547.0,
+      "path_nodes": 1245,
+      "corridor_count": 3,
+      "corridor_costs": [
+        2896547.0,
+        2897011.0,
+        2897699.0
+      ],
+      "horizon": 2317237.6,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 3
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "BAY",
+      "seed": 5,
+      "edge_file": "datasets/dimacs9/BAY.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_bay_seed5.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_bay_seed5.csv",
+      "source": "189940",
+      "target": "106354",
+      "time_budget": 4489647.9,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 2896547.0,
+      "path_nodes": 1245,
+      "corridor_count": 3,
+      "corridor_costs": [
+        2896547.0,
+        2897011.0,
+        2897699.0
+      ],
+      "horizon": 2317237.6,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "BAY",
+      "seed": 6,
+      "edge_file": "datasets/dimacs9/BAY.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_bay_seed6.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_bay_seed6.csv",
+      "source": "189940",
+      "target": "106354",
+      "time_budget": 4489647.9,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 2896547.0,
+      "path_nodes": 1245,
+      "corridor_count": 3,
+      "corridor_costs": [
+        2896547.0,
+        2897011.0,
+        2897699.0
+      ],
+      "horizon": 2317237.6,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 2
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "BAY",
+      "seed": 7,
+      "edge_file": "datasets/dimacs9/BAY.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_bay_seed7.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_bay_seed7.csv",
+      "source": "189940",
+      "target": "106354",
+      "time_budget": 4489647.9,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 2896547.0,
+      "path_nodes": 1245,
+      "corridor_count": 3,
+      "corridor_costs": [
+        2896547.0,
+        2897011.0,
+        2897699.0
+      ],
+      "horizon": 2317237.6,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 2
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "BAY",
+      "seed": 8,
+      "edge_file": "datasets/dimacs9/BAY.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_bay_seed8.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_bay_seed8.csv",
+      "source": "189940",
+      "target": "106354",
+      "time_budget": 4489647.9,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 2896547.0,
+      "path_nodes": 1245,
+      "corridor_count": 3,
+      "corridor_costs": [
+        2896547.0,
+        2897011.0,
+        2897699.0
+      ],
+      "horizon": 2317237.6,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 1
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "BAY",
+      "seed": 9,
+      "edge_file": "datasets/dimacs9/BAY.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_bay_seed9.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_bay_seed9.csv",
+      "source": "189940",
+      "target": "106354",
+      "time_budget": 4489647.9,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 2896547.0,
+      "path_nodes": 1245,
+      "corridor_count": 3,
+      "corridor_costs": [
+        2896547.0,
+        2897011.0,
+        2897699.0
+      ],
+      "horizon": 2317237.6,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 3
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "BAY",
+      "seed": 10,
+      "edge_file": "datasets/dimacs9/BAY.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_bay_seed10.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_bay_seed10.csv",
+      "source": "189940",
+      "target": "106354",
+      "time_budget": 4489647.9,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 2896547.0,
+      "path_nodes": 1245,
+      "corridor_count": 3,
+      "corridor_costs": [
+        2896547.0,
+        2897011.0,
+        2897699.0
+      ],
+      "horizon": 2317237.6,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "COL",
+      "seed": 1,
+      "edge_file": "datasets/dimacs9/COL.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_col_seed1.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_col_seed1.csv",
+      "source": "311826",
+      "target": "435540",
+      "time_budget": 14003037.9,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 9034218.0,
+      "path_nodes": 1932,
+      "corridor_count": 3,
+      "corridor_costs": [
+        9034218.0,
+        9037595.0,
+        9058720.0
+      ],
+      "horizon": 7227374.4,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 1
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "COL",
+      "seed": 2,
+      "edge_file": "datasets/dimacs9/COL.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_col_seed2.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_col_seed2.csv",
+      "source": "311826",
+      "target": "435540",
+      "time_budget": 14003037.9,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 9034218.0,
+      "path_nodes": 1932,
+      "corridor_count": 3,
+      "corridor_costs": [
+        9034218.0,
+        9037595.0,
+        9058720.0
+      ],
+      "horizon": 7227374.4,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 2
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "COL",
+      "seed": 3,
+      "edge_file": "datasets/dimacs9/COL.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_col_seed3.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_col_seed3.csv",
+      "source": "311826",
+      "target": "435540",
+      "time_budget": 14003037.9,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 9034218.0,
+      "path_nodes": 1932,
+      "corridor_count": 3,
+      "corridor_costs": [
+        9034218.0,
+        9037595.0,
+        9058720.0
+      ],
+      "horizon": 7227374.4,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 2
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "COL",
+      "seed": 4,
+      "edge_file": "datasets/dimacs9/COL.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_col_seed4.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_col_seed4.csv",
+      "source": "311826",
+      "target": "435540",
+      "time_budget": 14003037.9,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 9034218.0,
+      "path_nodes": 1932,
+      "corridor_count": 3,
+      "corridor_costs": [
+        9034218.0,
+        9037595.0,
+        9058720.0
+      ],
+      "horizon": 7227374.4,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 3
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "COL",
+      "seed": 5,
+      "edge_file": "datasets/dimacs9/COL.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_col_seed5.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_col_seed5.csv",
+      "source": "311826",
+      "target": "435540",
+      "time_budget": 14003037.9,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 9034218.0,
+      "path_nodes": 1932,
+      "corridor_count": 3,
+      "corridor_costs": [
+        9034218.0,
+        9037595.0,
+        9058720.0
+      ],
+      "horizon": 7227374.4,
+      "event_counts": {
+        "EdgeUpdate": 16,
+        "RequestArrival": 12,
+        "RequestCancel": 1
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "COL",
+      "seed": 6,
+      "edge_file": "datasets/dimacs9/COL.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_col_seed6.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_col_seed6.csv",
+      "source": "311826",
+      "target": "435540",
+      "time_budget": 14003037.9,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 9034218.0,
+      "path_nodes": 1932,
+      "corridor_count": 3,
+      "corridor_costs": [
+        9034218.0,
+        9037595.0,
+        9058720.0
+      ],
+      "horizon": 7227374.4,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 1
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "COL",
+      "seed": 7,
+      "edge_file": "datasets/dimacs9/COL.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_col_seed7.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_col_seed7.csv",
+      "source": "311826",
+      "target": "435540",
+      "time_budget": 14003037.9,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 9034218.0,
+      "path_nodes": 1932,
+      "corridor_count": 3,
+      "corridor_costs": [
+        9034218.0,
+        9037595.0,
+        9058720.0
+      ],
+      "horizon": 7227374.4,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 1
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "COL",
+      "seed": 8,
+      "edge_file": "datasets/dimacs9/COL.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_col_seed8.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_col_seed8.csv",
+      "source": "311826",
+      "target": "435540",
+      "time_budget": 14003037.9,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 9034218.0,
+      "path_nodes": 1932,
+      "corridor_count": 3,
+      "corridor_costs": [
+        9034218.0,
+        9037595.0,
+        9058720.0
+      ],
+      "horizon": 7227374.4,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 2
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "COL",
+      "seed": 9,
+      "edge_file": "datasets/dimacs9/COL.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_col_seed9.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_col_seed9.csv",
+      "source": "311826",
+      "target": "435540",
+      "time_budget": 14003037.9,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 9034218.0,
+      "path_nodes": 1932,
+      "corridor_count": 3,
+      "corridor_costs": [
+        9034218.0,
+        9037595.0,
+        9058720.0
+      ],
+      "horizon": 7227374.4,
+      "event_counts": {
+        "EdgeUpdate": 16,
+        "RequestArrival": 12,
+        "RequestCancel": 2
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "COL",
+      "seed": 10,
+      "edge_file": "datasets/dimacs9/COL.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_col_seed10.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_col_seed10.csv",
+      "source": "311826",
+      "target": "435540",
+      "time_budget": 14003037.9,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 9034218.0,
+      "path_nodes": 1932,
+      "corridor_count": 3,
+      "corridor_costs": [
+        9034218.0,
+        9037595.0,
+        9058720.0
+      ],
+      "horizon": 7227374.4,
+      "event_counts": {
+        "EdgeUpdate": 16,
+        "RequestArrival": 12,
+        "RequestCancel": 2
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "FLA",
+      "seed": 1,
+      "edge_file": "datasets/dimacs9/FLA.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_fla_seed1.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_fla_seed1.csv",
+      "source": "246730",
+      "target": "1041059",
+      "time_budget": 10171290.7,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 6562123.0,
+      "path_nodes": 2204,
+      "corridor_count": 3,
+      "corridor_costs": [
+        6562123.0,
+        6592498.0,
+        6585468.0
+      ],
+      "horizon": 5249698.4,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 2
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "FLA",
+      "seed": 2,
+      "edge_file": "datasets/dimacs9/FLA.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_fla_seed2.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_fla_seed2.csv",
+      "source": "246730",
+      "target": "1041059",
+      "time_budget": 10171290.7,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 6562123.0,
+      "path_nodes": 2204,
+      "corridor_count": 3,
+      "corridor_costs": [
+        6562123.0,
+        6592498.0,
+        6585468.0
+      ],
+      "horizon": 5249698.4,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 3
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "FLA",
+      "seed": 3,
+      "edge_file": "datasets/dimacs9/FLA.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_fla_seed3.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_fla_seed3.csv",
+      "source": "246730",
+      "target": "1041059",
+      "time_budget": 10171290.7,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 6562123.0,
+      "path_nodes": 2204,
+      "corridor_count": 3,
+      "corridor_costs": [
+        6562123.0,
+        6592498.0,
+        6585468.0
+      ],
+      "horizon": 5249698.4,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 2
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "FLA",
+      "seed": 4,
+      "edge_file": "datasets/dimacs9/FLA.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_fla_seed4.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_fla_seed4.csv",
+      "source": "246730",
+      "target": "1041059",
+      "time_budget": 10171290.7,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 6562123.0,
+      "path_nodes": 2204,
+      "corridor_count": 3,
+      "corridor_costs": [
+        6562123.0,
+        6592498.0,
+        6585468.0
+      ],
+      "horizon": 5249698.4,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "FLA",
+      "seed": 5,
+      "edge_file": "datasets/dimacs9/FLA.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_fla_seed5.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_fla_seed5.csv",
+      "source": "246730",
+      "target": "1041059",
+      "time_budget": 10171290.7,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 6562123.0,
+      "path_nodes": 2204,
+      "corridor_count": 3,
+      "corridor_costs": [
+        6562123.0,
+        6592498.0,
+        6585468.0
+      ],
+      "horizon": 5249698.4,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "FLA",
+      "seed": 6,
+      "edge_file": "datasets/dimacs9/FLA.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_fla_seed6.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_fla_seed6.csv",
+      "source": "246730",
+      "target": "1041059",
+      "time_budget": 10171290.7,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 6562123.0,
+      "path_nodes": 2204,
+      "corridor_count": 3,
+      "corridor_costs": [
+        6562123.0,
+        6592498.0,
+        6585468.0
+      ],
+      "horizon": 5249698.4,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 2
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "FLA",
+      "seed": 7,
+      "edge_file": "datasets/dimacs9/FLA.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_fla_seed7.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_fla_seed7.csv",
+      "source": "246730",
+      "target": "1041059",
+      "time_budget": 10171290.7,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 6562123.0,
+      "path_nodes": 2204,
+      "corridor_count": 3,
+      "corridor_costs": [
+        6562123.0,
+        6592498.0,
+        6585468.0
+      ],
+      "horizon": 5249698.4,
+      "event_counts": {
+        "EdgeUpdate": 16,
+        "RequestArrival": 12
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "FLA",
+      "seed": 8,
+      "edge_file": "datasets/dimacs9/FLA.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_fla_seed8.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_fla_seed8.csv",
+      "source": "246730",
+      "target": "1041059",
+      "time_budget": 10171290.7,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 6562123.0,
+      "path_nodes": 2204,
+      "corridor_count": 3,
+      "corridor_costs": [
+        6562123.0,
+        6592498.0,
+        6585468.0
+      ],
+      "horizon": 5249698.4,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 3
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "FLA",
+      "seed": 9,
+      "edge_file": "datasets/dimacs9/FLA.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_fla_seed9.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_fla_seed9.csv",
+      "source": "246730",
+      "target": "1041059",
+      "time_budget": 10171290.7,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 6562123.0,
+      "path_nodes": 2204,
+      "corridor_count": 3,
+      "corridor_costs": [
+        6562123.0,
+        6592498.0,
+        6585468.0
+      ],
+      "horizon": 5249698.4,
+      "event_counts": {
+        "EdgeUpdate": 16,
+        "RequestArrival": 12,
+        "RequestCancel": 2
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "FLA",
+      "seed": 10,
+      "edge_file": "datasets/dimacs9/FLA.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_fla_seed10.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_fla_seed10.csv",
+      "source": "246730",
+      "target": "1041059",
+      "time_budget": 10171290.7,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 6562123.0,
+      "path_nodes": 2204,
+      "corridor_count": 3,
+      "corridor_costs": [
+        6562123.0,
+        6592498.0,
+        6585468.0
+      ],
+      "horizon": 5249698.4,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 2
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "NW",
+      "seed": 1,
+      "edge_file": "datasets/dimacs9/NW.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_nw_seed1.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_nw_seed1.csv",
+      "source": "186604",
+      "target": "102769",
+      "time_budget": 18987276.8,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 12249856.0,
+      "path_nodes": 3580,
+      "corridor_count": 3,
+      "corridor_costs": [
+        12249856.0,
+        12250672.0,
+        12252095.0
+      ],
+      "horizon": 9799884.8,
+      "event_counts": {
+        "RequestArrival": 12,
+        "RequestCancel": 2,
+        "EdgeUpdate": 16
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "NW",
+      "seed": 2,
+      "edge_file": "datasets/dimacs9/NW.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_nw_seed2.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_nw_seed2.csv",
+      "source": "186604",
+      "target": "102769",
+      "time_budget": 18987276.8,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 12249856.0,
+      "path_nodes": 3580,
+      "corridor_count": 3,
+      "corridor_costs": [
+        12249856.0,
+        12250672.0,
+        12252095.0
+      ],
+      "horizon": 9799884.8,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 2
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "NW",
+      "seed": 3,
+      "edge_file": "datasets/dimacs9/NW.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_nw_seed3.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_nw_seed3.csv",
+      "source": "186604",
+      "target": "102769",
+      "time_budget": 18987276.8,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 12249856.0,
+      "path_nodes": 3580,
+      "corridor_count": 3,
+      "corridor_costs": [
+        12249856.0,
+        12250672.0,
+        12252095.0
+      ],
+      "horizon": 9799884.8,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 1
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "NW",
+      "seed": 4,
+      "edge_file": "datasets/dimacs9/NW.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_nw_seed4.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_nw_seed4.csv",
+      "source": "186604",
+      "target": "102769",
+      "time_budget": 18987276.8,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 12249856.0,
+      "path_nodes": 3580,
+      "corridor_count": 3,
+      "corridor_costs": [
+        12249856.0,
+        12250672.0,
+        12252095.0
+      ],
+      "horizon": 9799884.8,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 1
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "NW",
+      "seed": 5,
+      "edge_file": "datasets/dimacs9/NW.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_nw_seed5.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_nw_seed5.csv",
+      "source": "186604",
+      "target": "102769",
+      "time_budget": 18987276.8,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 12249856.0,
+      "path_nodes": 3580,
+      "corridor_count": 3,
+      "corridor_costs": [
+        12249856.0,
+        12250672.0,
+        12252095.0
+      ],
+      "horizon": 9799884.8,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "NW",
+      "seed": 6,
+      "edge_file": "datasets/dimacs9/NW.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_nw_seed6.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_nw_seed6.csv",
+      "source": "186604",
+      "target": "102769",
+      "time_budget": 18987276.8,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 12249856.0,
+      "path_nodes": 3580,
+      "corridor_count": 3,
+      "corridor_costs": [
+        12249856.0,
+        12250672.0,
+        12252095.0
+      ],
+      "horizon": 9799884.8,
+      "event_counts": {
+        "EdgeUpdate": 16,
+        "RequestArrival": 12,
+        "RequestCancel": 2
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "NW",
+      "seed": 7,
+      "edge_file": "datasets/dimacs9/NW.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_nw_seed7.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_nw_seed7.csv",
+      "source": "186604",
+      "target": "102769",
+      "time_budget": 18987276.8,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 12249856.0,
+      "path_nodes": 3580,
+      "corridor_count": 3,
+      "corridor_costs": [
+        12249856.0,
+        12250672.0,
+        12252095.0
+      ],
+      "horizon": 9799884.8,
+      "event_counts": {
+        "EdgeUpdate": 16,
+        "RequestArrival": 12
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "NW",
+      "seed": 8,
+      "edge_file": "datasets/dimacs9/NW.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_nw_seed8.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_nw_seed8.csv",
+      "source": "186604",
+      "target": "102769",
+      "time_budget": 18987276.8,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 12249856.0,
+      "path_nodes": 3580,
+      "corridor_count": 3,
+      "corridor_costs": [
+        12249856.0,
+        12250672.0,
+        12252095.0
+      ],
+      "horizon": 9799884.8,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "NW",
+      "seed": 9,
+      "edge_file": "datasets/dimacs9/NW.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_nw_seed9.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_nw_seed9.csv",
+      "source": "186604",
+      "target": "102769",
+      "time_budget": 18987276.8,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 12249856.0,
+      "path_nodes": 3580,
+      "corridor_count": 3,
+      "corridor_costs": [
+        12249856.0,
+        12250672.0,
+        12252095.0
+      ],
+      "horizon": 9799884.8,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    },
+    {
+      "scenario": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "parameter_value": 1.0,
+      "dataset": "NW",
+      "seed": 10,
+      "edge_file": "datasets/dimacs9/NW.edges.txt",
+      "initial_requests_file": "dynamic_scenarios_dimacs\\baseline\\initial_requests_nw_seed10.txt",
+      "events_file": "dynamic_scenarios_dimacs\\baseline\\events_nw_seed10.csv",
+      "source": "186604",
+      "target": "102769",
+      "time_budget": 18987276.8,
+      "ignore_first_col": true,
+      "directed": true,
+      "base_cost": 12249856.0,
+      "path_nodes": 3580,
+      "corridor_count": 3,
+      "corridor_costs": [
+        12249856.0,
+        12250672.0,
+        12252095.0
+      ],
+      "horizon": 9799884.8,
+      "event_counts": {
+        "RequestArrival": 12,
+        "EdgeUpdate": 16,
+        "RequestCancel": 3
+      },
+      "settings": {
+        "initial_requests": 3,
+        "arrival_count": 12,
+        "edge_updates": 8,
+        "horizon_ratio": 0.8,
+        "corridor_edge_ratio": 0.5,
+        "cancel_probability": 0.15,
+        "traffic_factors": [
+          1.5
+        ],
+        "corridor_count": 3,
+        "corridor_max_cost_ratio": 1.5,
+        "wait_approach_factor": 1.1,
+        "wait_slack_ratio": 0.005,
+        "demand_two_probability": 0.35
+      }
+    }
+  ]
+}
