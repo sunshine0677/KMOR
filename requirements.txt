@@ -1,0 +1,5 @@
+# Observed local Python: 3.11.7. This is a minimal version-pinned environment,
+# not an exhaustive transitive lockfile or a historical environment snapshot.
+numpy==1.26.4
+matplotlib==3.8.0
+networkx==3.1

@@ -1,0 +1,164 @@
+{
+  "files": [
+    {
+      "dataset": "OL",
+      "kind": "edge",
+      "required_path": "OL.cedge.txt",
+      "uploaded_path": "OL.cedge.txt",
+      "compressed": false,
+      "sha256_raw": "84ce019ae6f4adb704bd31c45d615f0ee2fd43d8e3534f5a7208d39384768efd",
+      "raw_bytes": 173277,
+      "uploaded_bytes": 173277
+    },
+    {
+      "dataset": "OL",
+      "kind": "request",
+      "required_path": "requests_ol.txt",
+      "uploaded_path": "requests_ol.txt",
+      "compressed": false,
+      "sha256_raw": "31476cabefecfa3c333b4722f09d453bca32a60289364bf3bfb992c4e91f3b9c",
+      "raw_bytes": 399,
+      "uploaded_bytes": 399
+    },
+    {
+      "dataset": "TG",
+      "kind": "edge",
+      "required_path": "TG.cedge.txt",
+      "uploaded_path": "TG.cedge.txt",
+      "compressed": false,
+      "sha256_raw": "83ad402250445d531b3fe661ababb1f344f2e4a14e366c1882d92046ee52ef9c",
+      "raw_bytes": 624409,
+      "uploaded_bytes": 624409
+    },
+    {
+      "dataset": "TG",
+      "kind": "request",
+      "required_path": "requests_tg.txt",
+      "uploaded_path": "requests_tg.txt",
+      "compressed": false,
+      "sha256_raw": "226f4aab3a55cadc126f58311998cf5d5c90ffcf14495e7e050c82f8c776a1dc",
+      "raw_bytes": 418,
+      "uploaded_bytes": 418
+    },
+    {
+      "dataset": "CD",
+      "kind": "edge",
+      "required_path": "CD.edges.txt",
+      "uploaded_path": "CD.edges.txt",
+      "compressed": false,
+      "sha256_raw": "139449dda874d4812b8e3b22d131e35e1945c8ca868cc93c6d9a0cb15ab16bcf",
+      "raw_bytes": 10374707,
+      "uploaded_bytes": 10374707
+    },
+    {
+      "dataset": "CD",
+      "kind": "request",
+      "required_path": "requests_cd.txt",
+      "uploaded_path": "requests_cd.txt",
+      "compressed": false,
+      "sha256_raw": "9558dd2c0f1998033cb4bdc7b68fd5d94b8bdf475c7d20ebc8105327d6a5ef48",
+      "raw_bytes": 577,
+      "uploaded_bytes": 577
+    },
+    {
+      "dataset": "NY",
+      "kind": "edge",
+      "required_path": "NY.edges.txt",
+      "uploaded_path": "NY.edges.txt.gz",
+      "compressed": true,
+      "sha256_raw": "4d8a5b0a7f446bae4c164afbc81574d5af3bbe4c5ddc72c913d030620880711c",
+      "raw_bytes": 37012183,
+      "uploaded_bytes": 8690121
+    },
+    {
+      "dataset": "NY",
+      "kind": "request",
+      "required_path": "requests_ny.txt",
+      "uploaded_path": "requests_ny.txt",
+      "compressed": false,
+      "sha256_raw": "f3efe01dccfc40a8598d54bb473b810decf6f391643be637a111939f7c50300b",
+      "raw_bytes": 576,
+      "uploaded_bytes": 576
+    },
+    {
+      "dataset": "BAY",
+      "kind": "edge",
+      "required_path": "datasets/dimacs9/BAY.edges.txt",
+      "uploaded_path": "datasets/dimacs9/BAY.edges.txt",
+      "compressed": false,
+      "sha256_raw": "55a748e9dbb8e9aa3c7df3cc94d63d0520f8de233897c2614428e5ee87c3774d",
+      "raw_bytes": 19741009,
+      "uploaded_bytes": 19741009
+    },
+    {
+      "dataset": "BAY",
+      "kind": "request",
+      "required_path": "datasets/dimacs9/requests_bay.txt",
+      "uploaded_path": "datasets/dimacs9/requests_bay.txt",
+      "compressed": false,
+      "sha256_raw": "feed5f98cb09ceb7b8450a680cb06172b5e709f5a1fcdb03b5ed0eb02ced3f4e",
+      "raw_bytes": 617,
+      "uploaded_bytes": 617
+    },
+    {
+      "dataset": "COL",
+      "kind": "edge",
+      "required_path": "datasets/dimacs9/COL.edges.txt",
+      "uploaded_path": "datasets/dimacs9/COL.edges.txt.gz",
+      "compressed": true,
+      "sha256_raw": "29a4e3d366f2521dce0d7d7fed6efc01cfd8deb344b758354e1b6a622bdd785f",
+      "raw_bytes": 26575741,
+      "uploaded_bytes": 7462254
+    },
+    {
+      "dataset": "COL",
+      "kind": "request",
+      "required_path": "datasets/dimacs9/requests_col.txt",
+      "uploaded_path": "datasets/dimacs9/requests_col.txt",
+      "compressed": false,
+      "sha256_raw": "1e5c57a6f93f15eea843679fe45da3f6f79903b822c06bd7ee54fdb3705c1bb8",
+      "raw_bytes": 641,
+      "uploaded_bytes": 641
+    },
+    {
+      "dataset": "FLA",
+      "kind": "edge",
+      "required_path": "datasets/dimacs9/FLA.edges.txt",
+      "uploaded_path": "datasets/dimacs9/FLA.edges.txt.gz",
+      "compressed": true,
+      "sha256_raw": "42877174b9762b5c82cbce15136bef7d2c224f3e5d5666b16804052b9897dc5f",
+      "raw_bytes": 70810829,
+      "uploaded_bytes": 19002711
+    },
+    {
+      "dataset": "FLA",
+      "kind": "request",
+      "required_path": "datasets/dimacs9/requests_fla.txt",
+      "uploaded_path": "datasets/dimacs9/requests_fla.txt",
+      "compressed": false,
+      "sha256_raw": "606a94b7c6e50b4888dafd41b3bb760bb198790b39fa1e9e85185463d8507f88",
+      "raw_bytes": 644,
+      "uploaded_bytes": 644
+    },
+    {
+      "dataset": "NW",
+      "kind": "edge",
+      "required_path": "datasets/dimacs9/NW.edges.txt",
+      "uploaded_path": "datasets/dimacs9/NW.edges.txt.gz",
+      "compressed": true,
+      "sha256_raw": "cb275d8afe00a00839b240ac92eac9dfc3d7453a9bc6f87d1456c6230ebe738f",
+      "raw_bytes": 75231451,
+      "uploaded_bytes": 20416777
+    },
+    {
+      "dataset": "NW",
+      "kind": "request",
+      "required_path": "datasets/dimacs9/requests_nw.txt",
+      "uploaded_path": "datasets/dimacs9/requests_nw.txt",
+      "compressed": false,
+      "sha256_raw": "b851e76c836ec177d42c40983de69f3b959599a47df1a4109035c02771765e48",
+      "raw_bytes": 649,
+      "uploaded_bytes": 649
+    }
+  ]
+}

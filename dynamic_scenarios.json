@@ -1,0 +1,90 @@
+{
+  "defaults": {
+    "initial_requests": 3,
+    "arrival_count": 12,
+    "edge_updates": 8,
+    "horizon_ratio": 0.8,
+    "corridor_edge_ratio": 0.5,
+    "cancel_probability": 0.15,
+    "traffic_factors": [1.5],
+    "corridor_count": 3,
+    "corridor_max_cost_ratio": 1.5,
+    "wait_approach_factor": 1.1,
+    "wait_slack_ratio": 0.005,
+    "demand_two_probability": 0.35
+  },
+  "scenarios": [
+    {
+      "name": "baseline",
+      "sweep": "baseline",
+      "parameter": "baseline",
+      "value": 1.0
+    },
+    {
+      "name": "request_sparse",
+      "sweep": "request_density",
+      "parameter": "arrival_count",
+      "value": 6,
+      "arrival_count": 6
+    },
+    {
+      "name": "request_dense",
+      "sweep": "request_density",
+      "parameter": "arrival_count",
+      "value": 18,
+      "arrival_count": 18
+    },
+    {
+      "name": "operational_dense",
+      "sweep": "operational_load",
+      "parameter": "arrival_rate_multiplier",
+      "value": 4.0,
+      "initial_requests": 5,
+      "arrival_count": 18,
+      "horizon_ratio": 0.3,
+      "demand_two_probability": 0.25
+    },
+    {
+      "name": "traffic_low",
+      "sweep": "traffic_frequency",
+      "parameter": "edge_updates",
+      "value": 4,
+      "edge_updates": 4
+    },
+    {
+      "name": "traffic_high",
+      "sweep": "traffic_frequency",
+      "parameter": "edge_updates",
+      "value": 12,
+      "edge_updates": 12
+    },
+    {
+      "name": "corridor_low",
+      "sweep": "corridor_ratio",
+      "parameter": "corridor_edge_ratio",
+      "value": 0.2,
+      "corridor_edge_ratio": 0.2
+    },
+    {
+      "name": "corridor_high",
+      "sweep": "corridor_ratio",
+      "parameter": "corridor_edge_ratio",
+      "value": 0.8,
+      "corridor_edge_ratio": 0.8
+    },
+    {
+      "name": "severity_mild",
+      "sweep": "traffic_severity",
+      "parameter": "traffic_factor",
+      "value": 1.2,
+      "traffic_factors": [1.2]
+    },
+    {
+      "name": "severity_severe",
+      "sweep": "traffic_severity",
+      "parameter": "traffic_factor",
+      "value": 2.0,
+      "traffic_factors": [2.0]
+    }
+  ]
+}
